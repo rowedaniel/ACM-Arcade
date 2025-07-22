@@ -3,3 +3,4 @@ carts/
 
 home/
 .DS_Store
+.venv
