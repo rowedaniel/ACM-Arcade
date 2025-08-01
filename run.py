@@ -45,7 +45,7 @@ def main():
 
     # main loop
     idletime = time.time()
-    IDLETHRESH = 3 
+    idle_thresh = 3 
     in_game = True
 
     button_pressed = threading.Event()
@@ -73,7 +73,7 @@ def main():
 
     focus_window(game_winid, None)
     while True:
-        if in_game and time.time() - idletime > IDLETHRESH:
+        if in_game and time.time() - idletime > idle_thresh:
             screensaver, screensaver_winid = start_screensaver(game_winid)
             in_game = False
         if poll_gamepad():
