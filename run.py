@@ -45,7 +45,7 @@ def main():
 
     # main loop
     idletime = time.time()
-    idle_thresh = 3 
+    idle_thresh = 60 * 5 
     in_game = True
 
     button_pressed = threading.Event()
