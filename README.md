@@ -31,3 +31,28 @@ From here, you can press alt+p, followed by the program you want to run (e.g. `f
 Press enter to confirm.
 Note that it is configured to not display anything, so you will have no feedback as to whether it's
 working until you press enter.
+
+
+# Install on a fresh machine
+
+We assume a bare x install with dwm (presumably
+with all peripheral visuals disabled).
+Furthermore, we assume the user is lcacm, and this repository
+is cloned under `/home/lcacm/Desktop/ACM-Arcade`.
+
+To configure, install python requirements, via
+```
+pip install requirements.txt
+```
+(presumably within a virtual environment).
+
+Then, symlink ACM-Arcade/.xinitrc to ~/.xinitrc,
+```
+ln -s /home/lcacm/Desktop/ACM-Arcade/.xinitrc .xinitrc
+```
+
+Lastly, setup cron to automatically update the system.
+```
+0 4 * * * /home/lcacm/Desktop/ACM-Arcade/update.sh
+```
+The 0 and 4 mean that the computer will be restarted at 04:00 each morning.
