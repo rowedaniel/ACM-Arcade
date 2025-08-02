@@ -2,11 +2,10 @@
 
 This is a collection of utilities for the LC ACM arcade machine!
 
-Presently does not include automatic updating of games.
-Games can be updated using (from inside this directory):
+Presently configured to pull the repo at 04:00 each morning.
+Games can be updated manually using (from inside this directory):
 ```sh
-git submodule update --recursive
-./.venv/bin/python build_games.py
+./update.sh
 ```
 
 ## On the Rasberry PI at LC
